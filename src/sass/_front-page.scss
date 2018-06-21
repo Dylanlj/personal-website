@@ -1,0 +1,63 @@
+.front-page {
+  position: relative;
+  top: 40px;
+  left: $side-bar-width + 40px;
+  width: 80%;
+  padding: 1px;
+}
+
+.content-container {
+  position: relative;
+
+  img {
+    position: absolute;
+    height: auto;
+    width: 200px;
+    z-index: 6;
+    border: 1px black solid;
+    box-shadow: 5px 5px 10px #212121;
+    cursor: pointer;
+  }
+}
+
+.art-content {
+  height: 400px;
+  .one {
+
+    left: 50px;
+  }
+  .two {
+    left: 180px;
+    top: 160px;
+  }
+  .three {
+
+    left: 210px;
+    top: 60px;
+  }
+  .four {
+    left: 340px;
+    top: 80px;
+    z-index: 0;
+  }
+  .five {
+    left: 490px;
+    top: 160px;
+  }
+  .six {
+    left: 530px;
+    top: 30px;
+  }
+
+}
+
+.project-content {
+ padding-bottom: 80px;
+  img {
+    position: relative;
+    height: 220px;
+    width: auto;
+    margin: 20px 20px 0px 20px;
+
+  }
+}

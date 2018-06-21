@@ -1,5 +1,37 @@
-@import '_front-page.scss';
+
 .App {
   background-color: #4c4c4c;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
+
+$side-bar-width: 120px;
+
+.side-bar {
+  position: absolute;
+  text-align:center;
+  top: 5%;
+  left: 0px;
+  width: $side-bar-width;
+  height: 90%;
+  border-right: 2px solid white;
+  color: white;
+  .links {
+    position: fixed;
+    top: 120px;
+    cursor: pointer;
+    div {
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
+
+@import '_front-page.scss';
+
+@import '_modal.scss';
