@@ -20,10 +20,11 @@ $side-bar-width: 120px;
   .links {
     position: fixed;
     top: 120px;
-    cursor: pointer;
+
     div {
+      cursor: pointer;
       margin-bottom: 20px;
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 }
@@ -35,3 +36,4 @@ $side-bar-width: 120px;
 @import '_front-page.scss';
 
 @import '_modal.scss';
+@import '_opening-animation.scss';

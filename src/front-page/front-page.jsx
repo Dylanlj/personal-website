@@ -5,6 +5,8 @@ import Content from './content.jsx';
 import Graphic from './graphic.jsx';
 
 class FrontPage extends Component {
+
+
   render() {
     return (
       <div className="front-page">
