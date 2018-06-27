@@ -1,13 +1,20 @@
+.graphic {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+
 .center {
   position: fixed;
   background-color: black;
-  height: 20px;
-  width: 20px;
-  // left: 0px;
-  // right: 0px;
-  // margin-left: auto;
-  // margin-right: auto;
-  z-index: 20;
+  top: 49%;
+  height: 1px;
+  width: 1px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +24,7 @@
 
 
 
-@keyframes outside-clockwise {
+@keyframes clockwise {
   from {
     transform: rotate(0deg)
   }
@@ -26,26 +33,137 @@
   }
 
 }
-.outside {
-  border: 20px red solid;
-  border-left: 0px;
-  width: 300px;
-  height: 600px;
-  border-bottom-right-radius: 600px;
-  border-top-right-radius: 600px;
-  animation: outside-clockwise 8s linear ;
-  transform-origin: 0% 50%;
+
+@keyframes counter-clockwise {
+  from {
+    transform: rotate(360deg)
+  }
+  to {
+    transform: rotate(0deg)
+  }
+
 }
 
-.inside {
+@mixin circular-setup ($size) {
+  position: absolute;
+  border: 10px orange solid;
+  width: $size;
+  height: $size   ;
+  border-top-right-radius: $size;
+  border-top-left-radius: $size;
+  border-bottom-left-radius: $size;
+  border-bottom-right-radius: $size;
+  transform-origin: center center;
+
+}
+
+
+.outside-one {
+  @include circular-setup(560px)
+  border: 20px red solid;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  // position: absolute;
+  // left: 0px;
+  // border: 20px red solid;
+  // border-left: 0px;
+  // width: $outside-one / 2;
+  // height: $outside-one;
+  // border-bottom-right-radius: $outside-one;
+  // border-top-right-radius: $outside-one;
+  animation: clockwise 8s linear ;
+  // transform-origin: 0% 50%;
+}
+
+
+// $outside-two: 480px;
+
+
+.outside-two {
+  @include circular-setup(480px)
+  border: 15px green solid;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  // position: absolute;
+  // border: 15px green solid;
+  // border-top: 10px solid transparent;
+  // border-bottom: 10px solid transparent;
+  // width: $outside-two;
+  // height: $outside-two;
+  // border-bottom-left-radius: $outside-two * 2;
+  // border-bottom-right-radius: $outside-two * 2;
+  // border-top-right-radius: $outside-two * 2;
+  // border-top-left-radius: $outside-two * 2;
+  animation: clockwise 4s linear ;
+  // transform-origin: center center;
+}
+
+$outside-three: 200px;
+
+.outside-three {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   border: 20px blue solid;
-  background-color: white;
   border-left: 0px;
   border-top:0px;
-  width: 100px;
-  height: 100px;
-  border-bottom-right-radius: 200px;
+  width: $outside-three;
+  height: $outside-three;
+  border-bottom-right-radius: $outside-three * 2;
 
-  animation: outside-clockwise 8s linear ;
+  animation: counter-clockwise 3s linear ;
   transform-origin: top left;
 }
+
+// $outside-four: 360px;
+
+.outside-four {
+    @include circular-setup(360px)
+    border: 10px orange solid;
+    border-right: 10px solid transparent;
+  // position: absolute;
+  // border: 10px orange solid;
+  // border-right: 10px solid transparent;
+  // width: $outside-four;
+  // height: $outside-four   ;
+  // border-top-right-radius: $outside-four;
+  // border-top-left-radius: $outside-four;
+  // border-bottom-left-radius: $outside-four;
+  // border-bottom-right-radius: $outside-four;
+  animation: clockwise 2s linear ;
+  // transform-origin: center center;
+}
+
+$outside-five: 270px;
+.outside-five {
+  position: absolute;
+  bottom: 0px;
+  border: 18px purple solid;
+  border-bottom: 0px;
+  width: $outside-five;
+  height: $outside-five / 2;
+  border-top-right-radius: $outside-five;
+  border-top-left-radius: $outside-five;
+  animation: counter-clockwise 3s linear ;
+  transform-origin: bottom center;
+}
+
+$outside-six: 220px;
+
+.outside-six {
+  position: absolute;
+  border: 10px teal solid;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  width: $outside-six;
+  height: $outside-six;
+  border-bottom-left-radius: $outside-six * 2;
+  border-bottom-right-radius: $outside-six * 2;
+  border-top-right-radius: $outside-six * 2;
+  border-top-left-radius: $outside-six * 2;
+  animation: clockwise 4s linear ;
+  transform-origin: center center;
+}
+
+
+

@@ -5,8 +5,12 @@ class Graphic extends Component {
     return (
       <div className="graphic">
       <div className="center">
-        <div className="outside"/>
-        <div className="inside"/>
+        <div className="circular outside-one"/>
+        <div className="circular outside-two"/>
+        <div className="circular outside-three"/>
+        <div className="circular outside-four"/>
+        <div className="circular outside-five"/>
+        <div className="circular outside-six"/>
       </div>
       </div>
     );
@@ -14,3 +18,4 @@ class Graphic extends Component {
 }
 
 export default Graphic;
+
